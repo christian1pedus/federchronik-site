@@ -5,22 +5,14 @@ permalink: /privacy
 
 # Datenschutzerklärung
 
-**Status:** Draft
-**Stand:** 2026-05-14
-**Owner:** Christian Schreiber
-**Verwendung:** Diese Datei ist die Markdown-Quelle. Vor Release wird sie als HTML auf GitHub Pages (oder vergleichbar) gehostet. Die App verlinkt aus dem Einstellungs-Screen auf die gehostete URL.
-
-**TODO vor Release:** Adresse, Kontaktmail und Hosting-URL final einsetzen. Siehe `[PLATZHALTER:*]`-Markierungen.
-
----
-
 ## 1. Verantwortlicher
 
 Verantwortlich für die Datenverarbeitung in dieser App im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
 
-`[PLATZHALTER: Vollständiger Name oder Firma]`
-`[PLATZHALTER: Adresse]`
-`[PLATZHALTER: E-Mail-Adresse]`
+Christian Schreiber
+Winninger Str. 9
+81737 München
+E-Mail: christian.schreiber@scribendo.de
 
 Weitere Angaben findest du im [Impressum](impressum.md).
 
@@ -70,14 +62,14 @@ Da Federchronik selbst keine personenbezogenen Daten zentral verarbeitet, besteh
 - **Auskunftsrecht (Art. 15 DSGVO):** Deine lokalen Daten kannst du direkt in der App einsehen. Für bei Anthropic gespeicherte Daten wende dich an Anthropic über deinen Account.
 - **Recht auf Berichtigung (Art. 16 DSGVO):** Bearbeite deine Einträge direkt in der App.
 - **Recht auf Löschung (Art. 17 DSGVO):** Lösche Einträge in der App oder deinstalliere die App komplett, um alle lokalen Daten zu entfernen.
-- **Recht auf Datenübertragbarkeit (Art. 20 DSGVO):** Eine Exportfunktion ist in 1.0 nicht implementiert (siehe Roadmap).
+- **Recht auf Datenübertragbarkeit (Art. 20 DSGVO):** Eine Exportfunktion ist in 1.0 nicht implementiert.
 - **Beschwerderecht (Art. 77 DSGVO):** Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren, in Deutschland z. B. beim Bundesbeauftragten für den Datenschutz und die Informationsfreiheit (BfDI).
 
 ## 5. App-Berechtigungen
 
 Federchronik fragt während der Nutzung folgende iOS-Berechtigungen an:
 
-- **Fotomediathek (PhotoKit):** ausschließlich zum Auswählen von Bildern für Tagebuch-Einträge. Die App nutzt nur ausgewählte Bilder (keine Zugriff auf die gesamte Mediathek).
+- **Fotomediathek (PhotoKit):** ausschließlich zum Auswählen von Bildern für Tagebuch-Einträge. Die App nutzt nur ausgewählte Bilder (kein Zugriff auf die gesamte Mediathek).
 - **Netzwerk:** ausschließlich, um die Anthropic-API zu erreichen, wenn du KI-Recherche nutzt.
 
 Die App fragt **keine** Berechtigungen für Standort, Kontakte, Kalender, Mikrofon, Tracking oder Benachrichtigungen an.
@@ -91,13 +83,13 @@ Daten, die im Rahmen der KI-Recherche an Anthropic übermittelt wurden, unterlie
 ## 7. Sicherheit
 
 - Dein Anthropic-API-Key wird in der iOS-Keychain gespeichert mit der Schutzklasse `kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly`. Das bedeutet: der Key ist nur nach dem ersten Entsperren deines iPhones nach einem Neustart verfügbar und wird **nicht** in iCloud-Backups oder in den iCloud-Keychain übertragen.
-- Deine Sammlungsdaten liegen in einem SwiftData-Store mit iOS Data Protection (`NSFileProtectionComplete`).
+- Deine Sammlungsdaten liegen in einem SwiftData-Store mit iOS Data Protection (`NSFileProtectionCompleteUntilFirstUserAuthentication`). Das bedeutet: nach einem Neustart sind die Daten verschlüsselt, bis du dein iPhone erstmalig nach dem Reboot entsperrst.
 - Die Kommunikation mit der Anthropic-API findet ausschließlich über HTTPS mit aktueller TLS-Verschlüsselung statt.
 
 ## 8. Änderungen dieser Datenschutzerklärung
 
-Diese Erklärung wird angepasst, wenn sich die Funktionsweise der App ändert. Die aktuelle Fassung ist immer unter `https://federchronik.scribendo.de/privacy` (Subdomain wird im Rahmen von Roadmap Phase 6 eingerichtet) abrufbar.
+Diese Erklärung wird angepasst, wenn sich die Funktionsweise der App ändert. Die aktuelle Fassung ist immer unter <https://federchronik.scribendo.de/privacy> abrufbar.
 
 ---
 
-**Stand:** 2026-05-14
+**Stand:** 2026-05-15
